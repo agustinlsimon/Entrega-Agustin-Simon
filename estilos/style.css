@@ -48,6 +48,9 @@
     padding-left: 30px;
     padding-right: 30px;
 }
+.header-nav-anchors:hover{
+    color: black;
+}
 .div-iframe{
     padding-top: 50px;
     text-align: center;
