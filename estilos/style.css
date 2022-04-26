@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Ubuntu:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+.grid-conteiner{
+    background-image: url(../img/campo-de-golf.jpg);
+    background-size: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: auto auto 450px auto;
+    grid-template-areas: 
+    "titulo titulo titulo titulo titulo"
+    "menu menu menu menu menu"
+    "div-iframe div-iframe div-iframe div-iframe div-iframe"
+    "redes redes redes redes redes";
+}
+.titulo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 300%;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    grid-area: titulo;
+}
+.menu{
+    grid-area: menu;
+}
+.header-nav{
+    text-align: center;
+    word-spacing: 30px;
+}
+.menu-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.header-nav-anchors{
+    text-decoration: none;
+    color: #d1c9c9;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 200%;
+    border: 5px double white;
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.div-iframe{
+    padding-top: 50px;
+    text-align: center;
+    grid-area: div-iframe;
+    align-items: center;
+}
+.redes{
+    color: white;
+    font-size: larger;
+    margin-top: 230px;
+    grid-area: redes;
+
+}
+.div1{
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 50px;
+}
+.div1-table{
+    border-width: 10px;
+    color: white;
+}
+.ul{
+    margin-top: 80px;
+    color: white;
+    font-size: xx-large;
+    padding-left: 60px;
+    list-style-type: square;
+}
+.form{
+    margin-top: 30px;
+    color: white;
+}
+.form-fielset{
+    border: double;
+    margin-right: 300px;
+}
+.form-fieldset-legend{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+.form-fieldset-label{
+    display: block;
+    margin-left: 10px;
+}
+.form-fieldset-input{
+    position: relative;
+    bottom: 13px;
+    left: 55px;
+}
+.form-fieldset-div{
+    font-weight: bold;
+    margin-left: 20%;
+    margin-bottom: 5px;
+    font-size: large;
+}
+.form-fieldset-textarea{
+    margin-left: 5px;
+    margin-bottom: 30px;
+}
+.form-fieldset-enviar{
+    display: block;
+    margin-left: 12px;
+    font-size: medium;
+}
+.form-fieldset-limpiar{
+    font-size: medium;
+    position: relative;
+    bottom: 18px;
+    left: 120px;
+}
+
+@media screen and (max-width: 320px){
+    .grid-conteiner{
+        border: 1px solid black;
+        display: grid;
+        grid-template-columns: repeat(3, 50%);
+        grid-template-rows: repeat(7, 200px);
+        gap: 2px 2px;
+        grid-template-areas:
+        "titulo titulo titulo"
+        "menu menu menu"
+        "menu menu menu"
+        "div-iframe div-iframe div-iframe"
+        "div-iframe div-iframe div-iframe"
+        "div-iframe div-iframe div-iframe"
+        "redes redes redes";
+    }
+    .titulo{
+        grid-area: titulo;
+    }
+    .menu{
+        grid-area: menu;
+    }
+    .div-iframe{
+        grid-area: div-iframe;
+    }
+    .redes{
+        grid-area: redes;
+    }
+}
